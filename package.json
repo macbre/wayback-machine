@@ -1,0 +1,24 @@
+{
+  "name": "wayback-machine",
+  "version": "0.0.0",
+  "description": "Internet Wayback Machine Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macbre/wayback-machine.git"
+  },
+  "keywords": [
+    "archive",
+    "memento",
+    "wayback"
+  ],
+  "author": "Maciej Brencz <maciej.brencz@gmail.com> (https://github.com/macbre)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macbre/wayback-machine/issues"
+  },
+  "homepage": "https://github.com/macbre/wayback-machine#readme"
+}
