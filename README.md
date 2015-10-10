@@ -5,7 +5,9 @@ Internet Wayback Machine Client
 
 ### `getTimeline`
 
-Get the timeline with all the snapshots of a given URL taken by http://web.archive.org
+> [Docs](http://ws-dl.blogspot.fr/2013/07/2013-07-15-wayback-machine-upgrades.html)
+
+Get the timeline with all the snapshots (mementos) of a given URL taken by http://web.archive.org
 
 ```js
 var wayback = require('wayback-machine');
