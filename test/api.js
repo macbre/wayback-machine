@@ -7,6 +7,7 @@ var assert = require('assert'),
 describe('npm module', function() {
 	it('should provide an API', function() {
 		assert.equal(typeof wayback, 'object');
+		assert.equal(typeof wayback.getClosest, 'function');
 		assert.equal(typeof wayback.getTimeline, 'function');
 	});
 });
