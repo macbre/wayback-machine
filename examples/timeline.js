@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+'use strict';
+
 var wayback = require('../'),
 	url = process.argv[2];
 
