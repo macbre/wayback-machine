@@ -23,5 +23,9 @@
   "homepage": "https://github.com/macbre/wayback-machine#readme",
   "devDependencies": {
     "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "split": "^1.0.0"
   }
 }
