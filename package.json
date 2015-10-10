@@ -4,7 +4,8 @@
   "description": "Internet Wayback Machine Client",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/"
+    "test": "mocha test/",
+    "lint": "jshint --verbose examples/ lib/ test/ index.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,15 @@
   },
   "homepage": "https://github.com/macbre/wayback-machine#readme",
   "devDependencies": {
+    "jshint": "^2.8.0",
     "mocha": "^2.3.3"
   },
   "dependencies": {
     "debug": "^2.2.0",
     "split": "^1.0.0"
+  },
+  "jshintConfig": {
+    "node": true,
+    "strict": true
   }
 }

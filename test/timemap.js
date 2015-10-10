@@ -1,3 +1,6 @@
+/*global describe, it */
+'use strict';
+
 var assert = require('assert'),
 	fs = require('fs'),
 	timemap = require('../lib/timemap');
