@@ -32,7 +32,7 @@ describe('wayback', function() {
       this.timeout(10000);
       var options = {'timeout': 100};
       wayback.getClosest(url, options, function(err, resp) {
-        assert.ok(err != null);
+        assert.ok(err !== null);
         assert.ok(err instanceof Error);
         assert.ok(resp === null);
         done();
