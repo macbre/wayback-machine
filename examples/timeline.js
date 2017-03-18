@@ -15,6 +15,12 @@ wayback.getTimeline(url, function(err, timeline) {
 		process.exit(2);
 	}
 
-	console.log('Timeline for <%s>:', url);
-	console.log(timeline);
+	console.error('# Timeline for <%s> (%d entries):', url, timeline.mementos.length);
+
+	timeline.mementos.forEach(function(item) {
+		var time = new Date(item.time);
+
+		//@see https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+		console.log('%s\t%s', time.toISOString(), item.url);
+	});
 });
