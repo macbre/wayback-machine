@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "debug": "^2.6.3",
+    "fetch": "^1.1.0",
     "split": "^1.0.0"
   },
   "jshintConfig": {
