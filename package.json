@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/macbre/wayback-machine#readme",
   "devDependencies": {
-    "jshint": "^2.9.2",
-    "mocha": "^2.5.3"
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
   },
   "dependencies": {
-    "debug": "^2.2.0",
+    "debug": "^2.6.3",
     "split": "^1.0.0"
   },
   "jshintConfig": {
