@@ -7,9 +7,10 @@ var assert = require('assert'),
 
 var url = 'http://automata.cc/thumb-chuck-wiimote.png';
 
-describe('wayback API', function() {
+describe('wayback API - integration test', function() {
 	describe('getClosest()', function() {
 		it('should get the closest url on archive', function(done) {
+			this.timeout(10000);
 			wayback.getClosest(url, function(err, resp) {
 				assert.ok(err === null);
 				assert.ok(resp instanceof Object);
