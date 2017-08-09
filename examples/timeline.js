@@ -20,7 +20,8 @@ wayback.getTimeline(url, function(err, timeline) {
 	timeline.mementos.forEach(function(item) {
 		var time = new Date(item.time);
 
-		//@see https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
-		console.log('%s\t%s', time.toISOString(), item.url);
+		// @see https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+		// 2007-03-06   http://example.com
+		console.log('%s\t%s', time.toISOString().substring(0, 10), item.url);
 	});
 });
