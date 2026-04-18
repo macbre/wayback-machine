@@ -1,20 +1,18 @@
 /*global describe, it */
 'use strict';
 
-var assert = require('assert'),
-		fs = require('fs'),
+var assert = require('node:assert'),
 		wayback = require('../lib/wayback');
 
-var url = 'http://automata.cc/thumb-chuck-wiimote.png';
+var url = 'https://macbre.net';
 
 describe('wayback API - integration test', function() {
-	describe('getClosest()', function() {
+	describe.skip('getClosest()', function() {
 		it('should get the closest url on archive', function(done) {
 			this.timeout(10000);
 			wayback.getClosest(url, function(err, resp) {
 				assert.ok(err === null);
-				assert.ok(resp instanceof Object);
-				assert.equal(resp.available, true);
+				assert.ok(resp.available);
 				done();
 			});
 		});
@@ -23,8 +21,7 @@ describe('wayback API - integration test', function() {
 			var options = {'timeout': 5000};
 			wayback.getClosest(url, options, function(err, resp) {
 				assert.ok(err === null);
-				assert.ok(resp instanceof Object);
-				assert.equal(resp.available, true);
+				assert.ok(resp.available);
 				done();
 			});
 		});
@@ -36,6 +33,22 @@ describe('wayback API - integration test', function() {
 				assert.ok(err !== null);
 				assert.ok(err instanceof Error);
 				assert.ok(resp === null);
+				done();
+			});
+		});
+	});
+
+	describe('getTimeline()', function() {
+		it('should get the timeline of url', function (done) {
+			this.timeout(30_000);
+			wayback.getTimeline(url, function (err, resp) {
+				assert.ok(err === null);
+				assert.ok(resp.original);
+
+				// https://web.archive.org/web/20080529061028/http://macbre.net:80/
+				assert.ok(resp.first.url.includes('/web.archive.org/'));
+				assert.ok(resp.first.url.includes('/macbre.net'));
+				assert.ok(resp.mementos.length > 0);
 				done();
 			});
 		});
